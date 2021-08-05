@@ -11,3 +11,4 @@ from itemadapter import ItemAdapter
 class NossaContrucaoPipeline:
     def process_item(self, item, spider):
         return item
+
