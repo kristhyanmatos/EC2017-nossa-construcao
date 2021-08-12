@@ -6,7 +6,7 @@ class TabelasSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            f"http://www.governotransparente.com.br/transparencia/projetos/resultado/44669490?inicio=01%2F01%2F2010&fim=04%2F08%2F2021&codobra=&nmobra=&datainfo=MTIwMjEwODA0MTcxMFBQUA%3D%3D&clean=false",
+            f"http://www.governotransparente.com.br/transparencia/projetos/resultado/44669490?inicio=19%2F12%2F2019&fim=11%2F08%2F2021&codobra=&nmobra=&datainfo=MTIwMjEwODEyMTEwOVBQUA%3D%3D&clean=false",
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
@@ -35,7 +35,7 @@ class TabelasSpider(scrapy.Spider):
                 else:
                     texto = coluna.xpath("./text()").get()
                 linha_formatada.append(texto)
-            # self.log(f"Linha {linha_formatada}")
+            self.log(f"Linha {linha_formatada}")
 
             linhas_formatadas.append(
                 {

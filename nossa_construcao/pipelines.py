@@ -5,10 +5,17 @@
 
 
 # useful for handling different item types with a single interface
-from itemadapter import ItemAdapter
+import pymongo
 
 
 class NossaContrucaoPipeline:
-    def process_item(self, item, spider):
-        return item
+    def __init__(self) -> None:
+        self.conexao = pymongo.MongoClient(
+            "localhost", 27017,
+        )
+        banco = self.conexao["nossa_construcao"]
+        self.colecao = banco["tabelas"]
 
+    def process_item(self, item, spider):
+        self.colecao.insert(dict(item))
+        return item
