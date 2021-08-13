@@ -29,7 +29,6 @@ def get_some_users():
         )
 
     except:
-        print(ex)
         return Response(response = json.dumps({"message":"deu ruim"}), status=500, mimetype="application/json")
 
 
