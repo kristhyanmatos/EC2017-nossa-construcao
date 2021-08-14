@@ -1,12 +1,13 @@
 import pymongo
+from config_env import URL_DB
+
+
 class ConexaoDB:
     def __init__(self) -> None:
         try:
-            mongo = pymongo.MongoClient(
-                host="localhost", port=27017, serverSelectionTimeoutMS=1000
-            )
+            mongo = pymongo.MongoClient(URL_DB)
             self.db = mongo.nossa_construcao
-            mongo.server_info()
+            print(mongo.server_info())
 
         except Exception as error:
             print("Error - ", error)
