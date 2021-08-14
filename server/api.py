@@ -11,7 +11,7 @@ db = conexao.db
 
 
 @app.route("/", methods=["GET"])
-def get_nossas_construcoes():
+def index():
     try:
 
         return Response(

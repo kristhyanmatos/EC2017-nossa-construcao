@@ -7,7 +7,7 @@ class ConexaoDB:
         try:
             mongo = pymongo.MongoClient(URL_DB)
             self.db = mongo.nossa_construcao
-            print(mongo.server_info())
+            print("Conectado!")
 
         except Exception as error:
             print("Error - ", error)
