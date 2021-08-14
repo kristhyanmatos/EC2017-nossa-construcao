@@ -1,1 +1,1 @@
-web: waitress-serve --call --port=80 server/api.py
+web: gunicorn server/api.py
