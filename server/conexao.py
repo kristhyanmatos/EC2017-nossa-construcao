@@ -1,5 +1,5 @@
 import pymongo
-from config_env import URL_DB
+from server.config_env import URL_DB
 
 
 class ConexaoDB:
