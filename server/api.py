@@ -10,6 +10,24 @@ conexao = ConexaoDB()
 db = conexao.db
 
 
+@app.route("/", methods=["GET"])
+def get_nossas_construcoes():
+    try:
+
+        return Response(
+            response=json.dumps({"ola": "haroldo"}),
+            status=200,
+            mimetype="application/json",
+        )
+
+    except Exception as error:
+        return Response(
+            response=json.dumps({"message": str(error)}),
+            status=500,
+            mimetype="application/json",
+        )
+
+
 @app.route("/nossas-construcoes", methods=["GET"])
 def get_nossas_construcoes():
     try:
@@ -30,4 +48,4 @@ def get_nossas_construcoes():
 
 
 if __name__ == "__main__":
-    app.run(port=80, debug=True)
+    app.run(debug=True)
