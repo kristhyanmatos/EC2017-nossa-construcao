@@ -11,11 +11,17 @@ import pymongo
 class NossaContrucaoPipeline:
     def __init__(self) -> None:
         self.conexao = pymongo.MongoClient(
-            "localhost", 27017,
+            "localhost",
+            27017,
         )
         banco = self.conexao["nossa_construcao"]
         self.colecao = banco["tabelas"]
+        self.dados = list(self.colecao.find())
 
     def process_item(self, item, spider):
+        for dado in self.dados:
+            if dado["codigo"] == item["codigo"]:
+                return item
+        print("Construção salva: ", item["codigo"])
         self.colecao.insert(dict(item))
         return item
