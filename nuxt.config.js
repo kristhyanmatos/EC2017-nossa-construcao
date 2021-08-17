@@ -7,14 +7,10 @@ export default {
   router: {
     base: '/EC2017-nossa-construcao/',
   },
-  // Modifica o diretorio de saida
-  generate: {
-    dir: 'public',
-  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'client',
+    title: 'NossaConstrucao',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
