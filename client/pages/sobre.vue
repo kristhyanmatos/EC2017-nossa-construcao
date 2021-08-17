@@ -25,7 +25,7 @@
       </b-card-text>
     </b-card>
 
-    <b-card title="Title" img-src="https://picsum.photos/300/300/?image=41" img-alt="Image" img-top>
+    <b-card title="Title" img-src="https://instagram.fmab1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/106719958_278232346780658_3989424356839443492_n.jpg?_nc_ht=instagram.fmab1-1.fna.fbcdn.net&_nc_ohc=_hy-08GA2wEAX8-ZLNf&edm=AP_V10EBAAAA&ccb=7-4&oh=4d74e73d3af46f86896f99ad8ddce2d9&oe=61235BAE&_nc_sid=4f375e" img-alt="Image" img-top>
       <b-card-text>
         Desenvolvedor: Kristhyan de Matos Maia
         Curso: Engenharia da Computação
@@ -33,7 +33,7 @@
         Disciplina: Banco de Dados e Desenvolvimento WEB
       </b-card-text>
     </b-card>
- 
+   </b-card-group>
   </div>
 </template>
 
