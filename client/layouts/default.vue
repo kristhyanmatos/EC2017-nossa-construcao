@@ -4,6 +4,8 @@
     <div class="container">
       <Nuxt />
     </div>
+
+    <Rodape />
   </div>
 </template>
 

@@ -2,7 +2,9 @@
   <div id="componente_grafico_valor_liquido">
     <div class="row">
       <div class="col text-center">
-        <h3>Comparativo entre Valores Previstos e Liquidados</h3>
+        <h1>
+          <strong>Comparativo entre Valores Previstos e Liquidados</strong>
+        </h1>
         <p>
           Analise comparativa entre os valores das licitações previstos e o
           valor liquidado ao final da obra, levando em consideração valores não
@@ -15,7 +17,7 @@
       :series="series"
       type="line"
       :options="chartOptions"
-      height="750"
+      height="700"
     />
   </div>
 </template>
@@ -142,10 +144,10 @@ export default Vue.extend({
 
 <style lang="scss">
 #componente_grafico_valor_liquido {
-  margin-top: 10vh;
+  margin-top: 60vh;
   width: 97vw;
 }
 #grafico_valor_liquido {
-  width: 97vw;
+  width: 96vw;
 }
 </style>

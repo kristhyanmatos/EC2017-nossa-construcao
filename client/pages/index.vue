@@ -19,10 +19,10 @@
           </p>
         </b-col>
       </b-row>
+      <img class="login-image" src="../assets/construcao_dois.svg" />
     </div>
 
     <GraficoValorLiquido />
-    <Rodape />
   </div>
 </template>
 
