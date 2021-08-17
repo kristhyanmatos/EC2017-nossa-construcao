@@ -7,6 +7,10 @@ export default {
   router: {
     base: '/EC2017-nossa-construcao/',
   },
+  // Modifica o diretorio de saida
+  generate: {
+    dir: 'public',
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -17,7 +21,13 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/EC2017-nossa-construcao/favicon.ico',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
