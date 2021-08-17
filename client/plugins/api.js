@@ -7,7 +7,7 @@ export default function ({ $axios }, inject) {
     },
   })
 
-  api.setBaseURL('http://127.0.0.1:80/')
+  api.setBaseURL('https://nossa-construcao.herokuapp.com/')
 
   inject('api', api)
 }
