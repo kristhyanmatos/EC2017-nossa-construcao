@@ -5,7 +5,7 @@
         <h1>Olá Haroldo</h1>
       </div>
     </div>
-    <Apexchart :series="arrValor" type="line" :options="chartOptions" />
+    <Apexchart :series="series" type="line" :options="chartOptions" />
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default Vue.extend({
   components: {},
   data() {
     return {
-      arrValor: [
+      series: [
         {
           name: 'Valor',
           data: [],
@@ -35,7 +35,7 @@ export default Vue.extend({
           curve: 'straight',
         },
         title: {
-          text: 'Taxa de crescimento',
+          text: 'Nossas Construções',
           align: 'left',
         },
       },
