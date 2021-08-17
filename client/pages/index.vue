@@ -1,8 +1,23 @@
 <template>
-  <div id="App">
+  <div id="app">
+    <Navbar />
+    <div id="tema">
+  <b-card
+    overlay
+    img-src="https://picsum.photos/900/250/?image=3"
+    img-alt="Card Image"
+    text-variant="white"
+    title="Transparência de valores"
+    sub-title="Construção civil"
+  >
+    <b-card-text>
+      Analise comparativa entre os valores das licitações previstos e o valor liquidado ao final da obra, levando em consideração valores não previstos no projeto inicialmente
+    </b-card-text>
+  </b-card>
+</div>
     <div class="row">
       <div class="col text-center">
-        <h1>Olá Haroldo</h1>
+        <h1>Gráfico Comparativo entre valores previstos e liquidados</h1>
       </div>
     </div>
     <b-row>
@@ -23,12 +38,14 @@
 import Vue from 'vue'
 
 import VueApexCharts from 'vue-apexcharts'
+import Navbar from '../components/Navbar.vue'
+
 
 Vue.use(VueApexCharts)
 Vue.component('Apexchart', VueApexCharts)
 export default Vue.extend({
   name: 'App',
-  components: {},
+  components: {Navbar},
   data() {
     return {
       series: [
@@ -139,5 +156,7 @@ export default Vue.extend({
   },
 })
 </script>
+
+  
 
 <style lang="scss"></style>
