@@ -1,10 +1,6 @@
 <template>
   <div id="navbar">
-    <b-avatar
-      src="https://www.unifesspa.edu.br/images/manuais/Marca_UNIFESSPA/2019/Marca-Vertical-Smbolo-Tipografia-002.png"
-      size="3rem"
-      to="/"
-    />
+    <b-avatar src="../assets/kmlogo.svg" size="3rem" to="/" />
     <b-navbar-nav>
       <b-nav-item to="/"> NOSSA CONSTRUÇÃO </b-nav-item>
     </b-navbar-nav>
