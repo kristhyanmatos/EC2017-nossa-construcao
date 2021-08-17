@@ -2,21 +2,22 @@
   <div>
     <p class="text-top"><strong> OBJETIVO DA APLICAÇÃO</strong></p>
     <div class="text-top">
-      O objetivo desta aplicação é fazer a analise de dados de projetos de
-      contrução civil da cidade de Marabá-PA. O processo de licitação de um
-      projeto na cidade é documentado e expresso no site do municipio, presente
+     O objetivo desta aplicação é fazer a análise de dados de projetos de
+      construção civil da cidade de Marabá-PA. O processo de licitação de um
+      projeto na cidade é documentado e expresso no site do município, presente
       em https://maraba.pa.gov.br/ , todo projeto detêm alguns parametros como o
-      código, data de inicio e fim do projeto, o valor previsto de gastos
+      código, data de início e fim do projeto, o valor previsto de gastos
       iniciais e o valor liquidado, valor esse representando o total de gastos
       que o projeto deteve, desse modo é o valor final pago pela prefeitura.
       Nessa perspectiva existe um problema, pois grande parte das vezes os
       projetos detêm um valor liquidado final com até 600% do valor inicial de
-      acrescimo, desse modo demonstra-se um superfaturamento exarcebado nos
+      acréscimo, desse modo demonstra-se um superfaturamento exacerbado nos
       projetos, que pode ser por diversos fatores, entretanto para uma boa
       gestão é necessário mapear essa problemática e com esse intuito nossa
-      aplicação resume em um gráfico essa analise de discrepância entre os
-      valores previstos e o real valor gasto pela prefeitura desde 2019 a a
+      aplicação resume em um gráfico essa análise de discrepância entre os
+      valores previstos e o real valor gasto pela prefeitura desde 2019 à
       2022(valores pagos até o momento).
+
     </div>
     <b-card-group deck>
       <b-card title="Mikael Almondes da Silva" :img-src="url_mikael" img-alt="Image" img-top>
