@@ -21,26 +21,18 @@
       </b-nav-item>
     </b-navbar-nav>
     <b-navbar-nav>
-      <b-nav-item href="https://www.instagram.com/mikael_almondes/" target="_blank">
+      <b-nav-item
+        href="https://www.instagram.com/mikael_almondes/"
+        target="_blank"
+      >
         MIKAEL ALMONDES
       </b-nav-item>
     </b-navbar-nav>
-    <b-dropdown id="dropdown-disciplinas" text="Disciplinas" class="m-md-2">
-      <b-dropdown-item to="/ads">
-        Avaliação e Desempenho de Sistemas
-      </b-dropdown-item>
-      <b-dropdown-item to="/nocoes_economia">
-        Noções de Economia
-      </b-dropdown-item>
-      <b-dropdown-item to="/db_web" variant="outline-danger">
-        Banco de Dados e Desenvolvimento Web
-      </b-dropdown-item>
-    </b-dropdown>
   </div>
 </template>
 
 <script>
-import Vue from "vue"
+import Vue from 'vue'
 
 export default Vue.extend({
   methods: {},

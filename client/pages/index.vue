@@ -1,162 +1,47 @@
 <template>
   <div id="app">
     <Navbar />
-    <div id="tema">
-  <b-card
-    overlay
-    img-src="https://picsum.photos/900/250/?image=3"
-    img-alt="Card Image"
-    text-variant="white"
-    title="Transparência de valores"
-    sub-title="Construção civil"
-  >
-    <b-card-text>
-      Analise comparativa entre os valores das licitações previstos e o valor liquidado ao final da obra, levando em consideração valores não previstos no projeto inicialmente
-    </b-card-text>
-  </b-card>
-</div>
+    <b-row>
+      <b-col align-self="center" xl="11">
+        <b-card
+          id="cardIndex"
+          overlay
+          img-src="https://picsum.photos/900/250/?image=3"
+          img-alt="Card Image"
+          text-variant="white"
+          title="Transparência de valores"
+          sub-title="Construção civil"
+        >
+          <b-card-text>
+            Analise comparativa entre os valores das licitações previstos e o
+            valor liquidado ao final da obra, levando em consideração valores
+            não previstos no projeto inicialmente
+          </b-card-text>
+        </b-card>
+      </b-col>
+    </b-row>
     <div class="row">
       <div class="col text-center">
         <h1>Gráfico Comparativo entre valores previstos e liquidados</h1>
       </div>
     </div>
-    <b-row>
-      <b-col align-self="center">
-        <Apexchart
-          :series="series"
-          type="line"
-          :options="chartOptions"
-          width="90%"
-          height="750"
-        />
-      </b-col>
-    </b-row>
+    <GraficoValorLiquido />
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
 
-import VueApexCharts from 'vue-apexcharts'
-import Navbar from '../components/Navbar.vue'
-
-
-Vue.use(VueApexCharts)
-Vue.component('Apexchart', VueApexCharts)
-export default Vue.extend({
-  name: 'App',
-  components: {Navbar},
-  data() {
-    return {
-      series: [
-        {
-          name: 'Valor Real',
-          data: [],
-        },
-        { name: 'Valor Líquidado', data: [] },
-      ],
-      chartOptions: {
-        dataLabels: {
-          enabled: false,
-        },
-        colors: ['#FF1654', '#247BA0'],
-        stroke: {
-          width: [4, 4],
-        },
-        plotOptions: {
-          bar: {
-            columnWidth: '20%',
-          },
-        },
-        xaxis: {
-          categories: [],
-        },
-        yaxis: {
-          axisBorder: {
-            show: false,
-          },
-          axisTicks: {
-            show: false,
-          },
-          labels: {
-            show: true,
-            type: 'number',
-            formatter(val) {
-              return val !== undefined ? val.toFixed(3) : val
-            },
-          },
-        },
-        legend: {
-          horizontalAlign: 'left',
-          offsetX: 40,
-        },
-      },
-    }
-  },
-  async mounted() {
-    await this.buscaDadosApi()
-  },
-  methods: {
-    async buscaDadosApi() {
-      await this.$api
-        .get('/nossas-construcoes')
-        .then((response) => {
-          const valores = response.data.map((construcao) => construcao.valor)
-          const liquidados = response.data.map(
-            (construcao) => construcao.liquido
-          )
-          const anos = response.data.map((construcao) => construcao.fim)
-          this.series = [
-            { name: 'Valor Real', data: valores },
-            { name: 'Valor Liquidado', data: liquidados },
-          ]
-          this.chartOptions = this.setChartOptions(anos)
-          console.log(anos)
-        })
-        .catch((error) => console.log(error))
-    },
-    setChartOptions(datas) {
-      return {
-        dataLabels: {
-          enabled: false,
-        },
-        colors: ['#FF1654', '#247BA0'],
-        stroke: {
-          width: [4, 4],
-        },
-        plotOptions: {
-          bar: {
-            columnWidth: '20%',
-          },
-        },
-        xaxis: {
-          categories: datas,
-        },
-        yaxis: {
-          axisBorder: {
-            show: false,
-          },
-          axisTicks: {
-            show: false,
-          },
-          labels: {
-            show: true,
-            type: 'number',
-            formatter(val) {
-              return val !== undefined ? val.toFixed(3) : val
-            },
-          },
-        },
-        legend: {
-          horizontalAlign: 'left',
-          offsetX: 40,
-        },
-      }
-    },
-  },
-})
+export default Vue.extend({})
 </script>
 
-  
-
-<style lang="scss"></style>
+<style lang="scss">
+#app {
+  justify-content: center;
+}
+#cardIndex {
+  margin-top: 70px;
+  width: 99%;
+  align-self: center;
+}
+</style>
