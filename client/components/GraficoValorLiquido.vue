@@ -1,16 +1,12 @@
 <template>
-  <div id="grafico_valor_liquido">
-    <b-row>
-      <b-col align-self="center">
-        <Apexchart
-          :series="series"
-          type="line"
-          :options="chartOptions"
-          width="90%"
-          height="750"
-        />
-      </b-col>
-    </b-row>
+  <div>
+    <Apexchart
+      id="grafico_valor_liquido"
+      :series="series"
+      type="line"
+      :options="chartOptions"
+      height="750"
+    />
   </div>
 </template>
 
@@ -134,4 +130,8 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#grafico_valor_liquido {
+  width: 97vw;
+}
+</style>

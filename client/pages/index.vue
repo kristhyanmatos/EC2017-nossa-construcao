@@ -1,31 +1,30 @@
 <template>
-  <div id="app">
+  <div>
     <Navbar />
-    <b-row>
-      <b-col align-self="center" xl="11">
-        <b-card
-          id="cardIndex"
-          overlay
-          img-src="https://picsum.photos/900/250/?image=3"
-          img-alt="Card Image"
-          text-variant="white"
-          title="Transparência de valores"
-          sub-title="Construção civil"
-        >
-          <b-card-text>
-            Analise comparativa entre os valores das licitações previstos e o
-            valor liquidado ao final da obra, levando em consideração valores
-            não previstos no projeto inicialmente
-          </b-card-text>
-        </b-card>
-      </b-col>
-    </b-row>
-    <div class="row">
-      <div class="col text-center">
-        <h1>Gráfico Comparativo entre valores previstos e liquidados</h1>
+    <div id="app">
+      <b-card
+        id="cardIndex"
+        overlay
+        img-src="https://picsum.photos/900/250/?image=3"
+        img-alt="Card Image"
+        text-variant="white"
+        title="Transparência de valores"
+        sub-title="Construção civil"
+      >
+        <b-card-text>
+          Analise comparativa entre os valores das licitações previstos e o
+          valor liquidado ao final da obra, levando em consideração valores não
+          previstos no projeto inicialmente
+        </b-card-text>
+      </b-card>
+      <div class="row">
+        <div class="col text-center">
+          <h3>Gráfico Comparativo entre valores previstos e liquidados</h3>
+        </div>
       </div>
+      <GraficoValorLiquido />
+      <Rodape />
     </div>
-    <GraficoValorLiquido />
   </div>
 </template>
 
@@ -37,11 +36,15 @@ export default Vue.extend({})
 
 <style lang="scss">
 #app {
-  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #cardIndex {
-  margin-top: 70px;
-  width: 99%;
+  width: 98vw;
   align-self: center;
 }
 </style>
