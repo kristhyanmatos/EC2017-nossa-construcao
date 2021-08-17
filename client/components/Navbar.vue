@@ -28,6 +28,9 @@
         MIKAEL ALMONDES
       </b-nav-item>
     </b-navbar-nav>
+    <b-navbar-nav>
+      <b-nav-item to="/sobre"> SOBRE NÓS </b-nav-item>
+    </b-navbar-nav>
   </div>
 </template>
 
