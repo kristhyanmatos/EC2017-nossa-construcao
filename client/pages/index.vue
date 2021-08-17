@@ -41,7 +41,22 @@ export default Vue.extend({
       },
     }
   },
-  async mounted() {},
+  async mounted() {
+    await this.buscaDadosApi()
+  },
+  methods: {
+    async buscaDadosApi() {
+      await this.$api
+        .get('/nossas-construcoes')
+        .then(
+          (response) =>
+            (this.series[0].data = response.data.map(
+              (construcao) => construcao.valor
+            ))
+        )
+        .catch((error) => console.log(error))
+    },
+  },
 })
 </script>
 

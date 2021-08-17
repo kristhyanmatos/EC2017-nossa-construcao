@@ -32,6 +32,7 @@ def index():
 def get_nossas_construcoes():
     try:
         data = list(db.tabelas.find())
+        print(data)
         for construcao in data:
             construcao["_id"] = str(construcao["_id"])
 
