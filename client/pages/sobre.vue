@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="text-top">OBJETIVO DA APLICAÇÃO</p>
+    <p class="text-top"><strong> OBJETIVO DA APLICAÇÃO</strong></p>
     <div class="text-top">
       O objetivo desta aplicação é fazer a analise de dados de projetos de
       contrução civil da cidade de Marabá-PA. O processo de licitação de um
@@ -19,17 +19,17 @@
       2022(valores pagos até o momento).
     </div>
     <b-card-group deck>
-      <b-card title="Title" :img-src="url_mikael" img-alt="Image" img-top>
+      <b-card title="Mikael Almondes da Silva" :img-src="url_mikael" img-alt="Image" img-top>
         <b-card-text>
-          Desenvolvedor: Mikael Almondes da Silva Curso: Engenharia da
+          Curso: Engenharia da
           Computação Turma: 2017 Disciplina: Banco de Dados e Desenvolvimento
           WEB
         </b-card-text>
       </b-card>
 
-      <b-card title="Title" :img-src="url_kristhyan" img-alt="Image" img-top>
+      <b-card title="Kristhyan de Matos Maia" :img-src="url_kristhyan" img-alt="Image" img-top>
         <b-card-text>
-          Desenvolvedor: Kristhyan de Matos Maia Curso: Engenharia da Computação
+          Curso: Engenharia da Computação
           Turma: 2017 Disciplina: Banco de Dados e Desenvolvimento WEB
         </b-card-text>
       </b-card>
