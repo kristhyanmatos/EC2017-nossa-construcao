@@ -8,29 +8,7 @@
     <b-navbar-nav>
       <b-nav-item to="/"> NOSSA CONSTRUÇÃO </b-nav-item>
     </b-navbar-nav>
-    <b-navbar-nav>
-      <b-nav-item href="https://unifesspa.edu.br/" target="_blank">
-        UNIFESSPA
-      </b-nav-item>
-    </b-navbar-nav>
-    <b-navbar-nav>
-      <b-nav-item href="https://faceel.unifesspa.edu.br/" target="_blank">
-        FACEEL
-      </b-nav-item>
-    </b-navbar-nav>
-    <b-navbar-nav>
-      <b-nav-item href="https://www.instagram.com/_kristhyan/" target="_blank">
-        KRISTHYAN
-      </b-nav-item>
-    </b-navbar-nav>
-    <b-navbar-nav>
-      <b-nav-item
-        href="https://www.instagram.com/mikael_almondes/"
-        target="_blank"
-      >
-        MIKAEL ALMONDES
-      </b-nav-item>
-    </b-navbar-nav>
+
     <b-navbar-nav id="item_nav_sobe_nos">
       <b-nav-item to="/sobre"> SOBRE NÓS </b-nav-item>
     </b-navbar-nav>
