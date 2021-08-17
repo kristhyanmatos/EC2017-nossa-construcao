@@ -19,10 +19,13 @@
       fatores, entretanto para uma boa gestão é necessário mapear essa
       problemática e com esse intuito nossa aplicação resume em um gráfico essa
       análise de discrepância entre os valores previstos e o real valor gasto
-      pela prefeitura desde 2019 à 2022(valores pagos até o momento). Projeto publicado no repositório
-      <a href="https://github.com/kristhyanmatos/EC2017-nossa-construcao" target="_blank"
-        >https://github.com/kristhyanmatos/EC2017-nossa-construcao</a
-      >
+      pela prefeitura desde 2019 à 2022(valores pagos até o momento). Projeto
+      publicado no repositório
+      <a
+        href="https://github.com/kristhyanmatos/EC2017-nossa-construcao"
+        target="_blank"
+        >GitHub</a
+      >.
     </div>
     <b-card-group deck>
       <b-card
