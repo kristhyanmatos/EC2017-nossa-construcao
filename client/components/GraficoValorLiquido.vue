@@ -144,7 +144,7 @@ export default Vue.extend({
 
 <style lang="scss">
 #componente_grafico_valor_liquido {
-  margin-top: 60vh;
+  margin-top: 20vh;
   width: 97vw;
 }
 #grafico_valor_liquido {
