@@ -6,6 +6,9 @@
       to="/"
     />
     <b-navbar-nav>
+      <b-nav-item to="/"> NOSSA CONSTRUÇÃO </b-nav-item>
+    </b-navbar-nav>
+    <b-navbar-nav>
       <b-nav-item href="https://unifesspa.edu.br/" target="_blank">
         UNIFESSPA
       </b-nav-item>
@@ -28,7 +31,7 @@
         MIKAEL ALMONDES
       </b-nav-item>
     </b-navbar-nav>
-    <b-navbar-nav>
+    <b-navbar-nav id="item_nav_sobe_nos">
       <b-nav-item to="/sobre"> SOBRE NÓS </b-nav-item>
     </b-navbar-nav>
   </div>
@@ -55,7 +58,7 @@ export default Vue.extend({
   display: flex;
   align-items: center;
 
-  background: rgb(160, 70, 85);
+  background: rgb(1, 131, 136);
 
   *:focus {
     outline: none !important;
@@ -65,5 +68,8 @@ export default Vue.extend({
   font-weight: bold;
   color: white;
   margin-left: 20px;
+}
+#item_nav_sobe_nos {
+  justify-self: flex-end !important;
 }
 </style>

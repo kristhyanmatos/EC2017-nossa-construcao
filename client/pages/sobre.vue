@@ -2,55 +2,61 @@
   <div>
     <p class="text-top">OBJETIVO DA APLICAÇÃO</p>
     <div class="text-top">
-      O objetivo desta aplicação é fazer a analise de dados de projetos de contrução civil
-      da cidade de Marabá-PA. O processo de licitação de um projeto na cidade é documentado e expresso 
-      no site do municipio, presente em https://maraba.pa.gov.br/ , todo projeto detêm alguns parametros
-      como o código, data de inicio e fim do projeto, o valor previsto de gastos iniciais e o valor liquidado,
-      valor esse representando o total de gastos que o projeto deteve, desse modo é o valor final pago pela 
-      prefeitura.
-      Nessa perspectiva existe um problema, pois grande parte das vezes os projetos detêm um valor liquidado final com até
-      600% do valor inicial de acrescimo, desse modo demonstra-se um superfaturamento exarcebado nos projetos,
-      que pode ser por diversos fatores, entretanto para uma boa gestão é necessário mapear essa problemática e 
-      com esse intuito nossa aplicação resume em um gráfico essa analise de discrepância entre os valores previstos
-      e o real valor gasto pela prefeitura desde 2019 a a 2022(valores pagos até o momento).  
-     
+      O objetivo desta aplicação é fazer a analise de dados de projetos de
+      contrução civil da cidade de Marabá-PA. O processo de licitação de um
+      projeto na cidade é documentado e expresso no site do municipio, presente
+      em https://maraba.pa.gov.br/ , todo projeto detêm alguns parametros como o
+      código, data de inicio e fim do projeto, o valor previsto de gastos
+      iniciais e o valor liquidado, valor esse representando o total de gastos
+      que o projeto deteve, desse modo é o valor final pago pela prefeitura.
+      Nessa perspectiva existe um problema, pois grande parte das vezes os
+      projetos detêm um valor liquidado final com até 600% do valor inicial de
+      acrescimo, desse modo demonstra-se um superfaturamento exarcebado nos
+      projetos, que pode ser por diversos fatores, entretanto para uma boa
+      gestão é necessário mapear essa problemática e com esse intuito nossa
+      aplicação resume em um gráfico essa analise de discrepância entre os
+      valores previstos e o real valor gasto pela prefeitura desde 2019 a a
+      2022(valores pagos até o momento).
     </div>
-   <b-card-group deck>
-    <b-card title="Title" img-src="https://instagram.fmab1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/82878889_555066915090242_7732950829602177024_n.jpg?_nc_ht=instagram.fmab1-1.fna.fbcdn.net&_nc_ohc=HUaDtMTxfvwAX-LJUqL&edm=AP_V10EBAAAA&ccb=7-4&oh=7b9336861fe7f94dc0d9cd056ad589d7&oe=61237B97&_nc_sid=4f375e" img-alt="Image" img-top>
-      <b-card-text>
-        Desenvolvedor: Mikael Almondes da Silva
-        Curso: Engenharia da Computação
-        Turma: 2017
-        Disciplina: Banco de Dados e Desenvolvimento WEB
-      </b-card-text>
-    </b-card>
+    <b-card-group deck>
+      <b-card title="Title" :img-src="url_mikael" img-alt="Image" img-top>
+        <b-card-text>
+          Desenvolvedor: Mikael Almondes da Silva Curso: Engenharia da
+          Computação Turma: 2017 Disciplina: Banco de Dados e Desenvolvimento
+          WEB
+        </b-card-text>
+      </b-card>
 
-    <b-card title="Title" img-src="https://instagram.fmab1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/106719958_278232346780658_3989424356839443492_n.jpg?_nc_ht=instagram.fmab1-1.fna.fbcdn.net&_nc_ohc=_hy-08GA2wEAX8-ZLNf&edm=AP_V10EBAAAA&ccb=7-4&oh=4d74e73d3af46f86896f99ad8ddce2d9&oe=61235BAE&_nc_sid=4f375e" img-alt="Image" img-top>
-      <b-card-text>
-        Desenvolvedor: Kristhyan de Matos Maia
-        Curso: Engenharia da Computação
-        Turma: 2017
-        Disciplina: Banco de Dados e Desenvolvimento WEB
-      </b-card-text>
-    </b-card>
-   </b-card-group>
+      <b-card title="Title" :img-src="url_kristhyan" img-alt="Image" img-top>
+        <b-card-text>
+          Desenvolvedor: Kristhyan de Matos Maia Curso: Engenharia da Computação
+          Turma: 2017 Disciplina: Banco de Dados e Desenvolvimento WEB
+        </b-card-text>
+      </b-card>
+    </b-card-group>
   </div>
 </template>
 
 <script>
-  
-    export default{
-        name: 'SobreNos'
-      
+import Vue from 'vue'
+
+export default Vue.extend({
+  name: 'SobreNos',
+  data() {
+    return {
+      url_mikael:
+        'https://scontent.fmab1-1.fna.fbcdn.net/v/t1.6435-9/77082677_2633306276785876_3182608046652129280_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7_w22uG7RR62jr9j7gao23JMyO_fhAlHckzI79-ECUSYsgc5G4YrV2FINL39SF08LW4KUPcZvDUn2urS3Rewx&_nc_ohc=b5R78B8FLdgAX8SNimh&tn=TezutjTH_Xr4VaPO&_nc_ht=scontent.fmab1-1.fna&oh=abc72b3fb9febcde76476be42a12d58a&oe=6140C8DA',
+      url_kristhyan:
+        'https://pbs.twimg.com/profile_images/1346143037223809034/rEon3b_k.jpg',
     }
-    
+  },
+})
 </script>
 
 <style scoped>
-
-    .text-top{
-        color: var(--color-text-light);
-        font-size: 22px;
-        margin-bottom: 20px;
-    }
+.text-top {
+  color: var(--color-text-light);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
 </style>

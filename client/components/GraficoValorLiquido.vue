@@ -1,5 +1,15 @@
 <template>
-  <div>
+  <div id="componente_grafico_valor_liquido">
+    <div class="row">
+      <div class="col text-center">
+        <h3>Comparativo entre Valores Previstos e Liquidados</h3>
+        <p>
+          Analise comparativa entre os valores das licitações previstos e o
+          valor liquidado ao final da obra, levando em consideração valores não
+          previstos no projeto inicialmente
+        </p>
+      </div>
+    </div>
     <Apexchart
       id="grafico_valor_liquido"
       :series="series"
@@ -131,6 +141,10 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+#componente_grafico_valor_liquido {
+  margin-top: 10vh;
+  width: 97vw;
+}
 #grafico_valor_liquido {
   width: 97vw;
 }
