@@ -28,7 +28,8 @@
       <img class="login-image" src="../assets/construcao_dois.svg" />
     </div>
 
-    <TabelaConstrucoesMaisRapidas />
+    <TabelaConstrucoesMaisDemoradas />
+    <TabelaMaiorGasto />
   </div>
 </template>
 
