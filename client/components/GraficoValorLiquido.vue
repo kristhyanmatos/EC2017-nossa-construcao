@@ -46,12 +46,7 @@ export default Vue.extend({
         },
         colors: ['#FF1654', '#247BA0'],
         stroke: {
-          width: [4, 4],
-        },
-        plotOptions: {
-          bar: {
-            columnWidth: '20%',
-          },
+          width: 'straight',
         },
         xaxis: {
           categories: [],
@@ -65,9 +60,8 @@ export default Vue.extend({
           },
           labels: {
             show: true,
-            type: 'number',
             formatter(val) {
-              return val !== undefined ? val.toFixed(3) : val
+              return val + '%'
             },
           },
         },
@@ -96,7 +90,6 @@ export default Vue.extend({
             { name: 'Valor Liquidado', data: liquidados },
           ]
           this.chartOptions = this.setChartOptions(anos)
-          console.log(anos)
         })
         .catch((error) => console.log(error))
     },
@@ -126,9 +119,14 @@ export default Vue.extend({
           },
           labels: {
             show: true,
-            type: 'number',
             formatter(val) {
-              return val !== undefined ? val.toFixed(3) : val
+              return val !== undefined
+                ? 'R$ ' +
+                    val.toString().toLocaleString('pt-br', {
+                      style: 'currency',
+                      currency: 'BRL',
+                    })
+                : val
             },
           },
         },
