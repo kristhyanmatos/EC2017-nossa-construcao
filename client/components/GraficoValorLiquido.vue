@@ -84,7 +84,9 @@ export default Vue.extend({
           const liquidados = response.data.map(
             (construcao) => construcao.liquido
           )
-          const anos = response.data.map((construcao) => construcao.fim)
+          const anos = response.data.map(
+            (construcao) => construcao.fim + ' - Cód: ' + construcao.codigo
+          )
           this.series = [
             { name: 'Valor Real', data: valores },
             { name: 'Valor Liquidado', data: liquidados },
@@ -115,7 +117,7 @@ export default Vue.extend({
             show: false,
           },
           axisTicks: {
-            show: false,
+            show: true,
           },
           labels: {
             show: true,
