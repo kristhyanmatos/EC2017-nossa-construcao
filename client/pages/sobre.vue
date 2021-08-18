@@ -25,8 +25,7 @@
         href="https://github.com/kristhyanmatos/EC2017-nossa-construcao"
         target="_blank"
         >GitHub</a
-      >.
-    </div>
+      >
     <b-card-group deck>
       <b-card
         title="Mikael Almondes da Silva"
