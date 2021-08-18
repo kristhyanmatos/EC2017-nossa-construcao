@@ -1,12 +1,18 @@
 <template>
   <div id="app">
     <div class="carrossel">
-      <b-row>
-        <b-col xl="9">
-          <img class="login-image" src="../assets/construcao_um.svg" />
+      <b-row align-h="center">
+        <b-col xl="4">
+          <p id="construcao_todos_texto">
+            Dados de construções em Marabá-PA nos últimos 10 anos.
+          </p>
         </b-col>
-        <b-col xl="3">
-          <p id="construcao_todos_texto">A construção é de todos nós.</p>
+        <b-col xl="7">
+          <img
+            id="imagem_um"
+            class="login-image"
+            src="../assets/construcao_um.svg"
+          />
         </b-col>
       </b-row>
     </div>
@@ -21,6 +27,8 @@
       </b-row>
       <img class="login-image" src="../assets/construcao_dois.svg" />
     </div>
+
+    <TabelaConstrucoesMaisRapidas />
   </div>
 </template>
 
@@ -31,9 +39,12 @@ export default Vue.extend({})
 </script>
 
 <style lang="scss">
+#imagem_um {
+  width: 30vw;
+}
 .carrossel {
   margin-top: 10vh;
-  width: 60vw;
+  width: 70vw;
 }
 #app {
   margin: 0 auto;
@@ -46,7 +57,7 @@ export default Vue.extend({})
   align-self: center;
 }
 #construcao_todos_texto {
-  font-size: 38px;
+  font-size: 40px;
   color: rgb(0, 0, 0);
   font-weight: bold;
 }

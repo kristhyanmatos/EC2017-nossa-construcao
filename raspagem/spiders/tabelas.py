@@ -6,7 +6,7 @@ class TabelasSpider(scrapy.Spider):
 
     def start_requests(self):
         urls = [
-            f"http://www.governotransparente.com.br/transparencia/projetos/resultado/44669490?inicio=01%2F11%2F2019&fim=12%2F08%2F2021&codobra=&nmobra=&datainfo=MTIwMjEwODE2MTYxOFBQUA==&clean=false",
+            f"http://www.governotransparente.com.br/transparencia/projetos/resultado/44669490?inicio=01%2F01%2F2011&fim=17%2F08%2F2021&codobra=&nmobra=&datainfo=MTIwMjEwODE4MTQ0N1BQUA%3D%3D&clean=false",
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)

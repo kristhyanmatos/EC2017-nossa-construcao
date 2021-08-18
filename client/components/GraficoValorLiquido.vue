@@ -3,12 +3,12 @@
     <div class="row">
       <div class="col text-center">
         <h1>
-          <strong>Comparativo entre Valores Previstos e Liquidados</strong>
+          <strong>Comparativo entre Valores Previstos e Liquidados.</strong>
         </h1>
         <p>
           Analise comparativa entre os valores das licitações previstos e o
           valor liquidado ao final da obra, levando em consideração valores não
-          previstos no projeto inicialmente
+          previstos no projeto inicialmente.
         </p>
       </div>
     </div>
@@ -35,7 +35,7 @@ export default Vue.extend({
     return {
       series: [
         {
-          name: 'Valor Real',
+          name: 'Valor Previsto',
           data: [],
         },
         { name: 'Valor Líquidado', data: [] },
@@ -88,7 +88,7 @@ export default Vue.extend({
             (construcao) => construcao.fim + ' - Cód: ' + construcao.codigo
           )
           this.series = [
-            { name: 'Valor Real', data: valores },
+            { name: 'Valor Previsto', data: valores },
             { name: 'Valor Liquidado', data: liquidados },
           ]
           this.chartOptions = this.setChartOptions(anos)
