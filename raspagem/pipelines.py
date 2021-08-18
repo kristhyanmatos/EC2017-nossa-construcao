@@ -14,7 +14,7 @@ class NossaContrucaoPipeline:
             "localhost",
             27017,
         )
-        banco = self.conexao["raspagem"]
+        banco = self.conexao["nossa_construcao"]
         self.colecao = banco["tabelas"]
         self.dados = list(self.colecao.find())
 
